@@ -1,0 +1,7 @@
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\MarmaraMovieWorld.exe
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\MarmaraMovieWorld.dll
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\MarmaraMovieWorld.deps.json
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\MarmaraMovieWorld.runtimeconfig.json
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\PubTmp\Out\MarmaraMovieWorld.pdb
