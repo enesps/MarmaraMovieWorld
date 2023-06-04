@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{A32979B2-ADED-44AD-B87A-B7E5FE7B00D2}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MarmaraMovieWorld PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarmaraMovieWorld/wwwroot/css/site.css">
+    <Files>
+      <File FileName="MarmaraMovieWorld/Pages/Index.cshtml" Line="30" Column="20" />
+      <File FileName="MarmaraMovieWorld/wwwroot/css/site.css" Line="51" Column="20" />
+      <File FileName="MarmaraMovieWorld/Pages/SearchResult.cshtml" Line="1" Column="1" />
+      <File FileName="MarmaraMovieWorld/Pages/Login.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MarmaraMovieWorld" expanded="True">
+            <Node name="MarmaraMovieWorld" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
