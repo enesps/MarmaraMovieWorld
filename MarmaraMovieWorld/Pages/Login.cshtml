@@ -1,0 +1,49 @@
+﻿@page
+@model MarmaraMovieWorld.Pages.LoginModel
+@{
+}
+
+
+<body class="bg-black" style="--bs-bg-opacity: .7;">
+    <div class="container " style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100%;
+       
+    width: 100%;">
+
+        <div class=" login pt-5 rounded-3 ">
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center p-3"><h1>Marmara Movie World</h1></div>
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Email address</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                            <div class="form-group m-3 ">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="checkbox">Remember me</label>
+                            </div>
+                            <div class="form-group m-3 row row-cols-1 ">
+                                <button type="submit" class="btn btn-outline-primary mb-3"><a class="nav-link text-light" asp-area="" asp-page="/Homepage">Sign In</a></button>
+                                <button type="button" class="d-flex  text-center align-items-center justify-content-center rounded-2 btn btn-primary /25">
+                                    <img src="https://kaiber.ai/images/487d2d0a24351d59d4f7a116ba7f1236-google.svg" alt="Google Icon">
+                                    <span class="text-white ">Sign in with Google</span>
+                                </button>
+                                <p class="text-center mt-3">or</p>
+                                <button type="submit" class="btn btn-outline-primary href"><a class="nav-link text-light" asp-area="" asp-page="/Register">Sign Up</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
