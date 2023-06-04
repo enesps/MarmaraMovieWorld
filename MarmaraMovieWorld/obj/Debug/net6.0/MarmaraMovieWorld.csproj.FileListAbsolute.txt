@@ -29,3 +29,5 @@ C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Debug\net6.
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Debug\net6.0\MarmaraMovieWorld.pdb
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Debug\net6.0\MarmaraMovieWorld.genruntimeconfig.cache
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Debug\net6.0\ref\MarmaraMovieWorld.dll
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Debug\net6.0\MarmaraMovieWorld.csproj.CopyComplete

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebProject.Model;
-using WebProject.Services;
+using MarmaraMovieWorld.Model;
+using MarmaraMovieWorld.Services;
 
 namespace MarmaraMovieWorld.Pages
 {
@@ -15,16 +15,7 @@ namespace MarmaraMovieWorld.Pages
         }
         [BindProperty]
         public string Term { get; set; }
-        WikiModel wikidata { get; set; }
-        [BindProperty]
-        public string Data { get; set; }
-        public void OnPostWikiRequest(JSONWikiService jsonWikiService)
-        {
-            Console.WriteLine(Term);
-            wikidata = jsonWikiService.GetWikiModel(Term);
-            Data = wikidata.age.ToString();
-        }
-
+     
 
         [BindProperty]
         public string PokeName { get; set; }

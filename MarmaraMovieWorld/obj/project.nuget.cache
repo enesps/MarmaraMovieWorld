@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zp+xQk4ieB4+j84COWlivV5NGqlozuVwVpVVVkkuU73WY6Jf7dWFi9x3szJlCVFkPUjvvLtOilVZVLedLv8N2A==",
+  "dgSpecHash": "eum06UydpEx59gYiNbqDVA41gV1uZb+phBuxc0Ixt75QNvgi05HTiKiTiLBldMdMNd7lOiGIVG5zOo06/DZUwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\MarmaraMovieWorld.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
