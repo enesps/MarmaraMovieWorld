@@ -55,25 +55,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/apple/.nuget/packages/": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/MarmaraMovieWorld.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Source\\Repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\MarmaraMovieWorld.csproj",
       "projectName": "MarmaraMovieWorld",
-      "projectPath": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/MarmaraMovieWorld.csproj",
-      "packagesPath": "/Users/apple/.nuget/packages/",
-      "outputPath": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/obj/",
+      "projectPath": "C:\\Users\\LENOVO\\Source\\Repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\MarmaraMovieWorld.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Source\\Repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/apple/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -116,7 +117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
