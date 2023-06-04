@@ -20,20 +20,17 @@
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="text-white login-input bg-dark border border-dark" style="--bs-bg-opacity: .7;" id="password" required>
                             </div>
-                            <button type="submit" class="btn btn-dark w-100 ">Login</button>
                             <div class="form-group m-3 ">
                                 <input type="checkbox" class="form-check-input" />
                                 <label for="checkbox">Remember me</label>
                             </div>
-                            <div class="form-group row row-cols-1 pb-4 " style="width:280px; margin-left:35px;">
-                                <button type="submit" class="btn btn-outline-dark mb-3"><a class="p-0 nav-link text-light" asp-area="" asp-page="/Homepage">Sign In</a></button>
-                                <button type="button" class="d-flex  text-center align-items-center justify-content-center rounded-2 btn btn-dark /25">
-                                    <img src="https://kaiber.ai/images/487d2d0a24351d59d4f7a116ba7f1236-google.svg" alt="Google Icon">
-                                    <span class="text-white ">Sign in with Google</span>
-                                </button>
-                                <p class="text-center mt-3">or</p>
-                                <button type="submit" class="btn btn-outline-dark href"><a class="p-0 nav-link text-light" asp-area="" asp-page="/Register">Sign Up</a></button>
-                            </div>
+                            <button type="submit" class="btn btn-dark w-100 mb-3">Login</button>
+                            <button type="submit" class="btn btn-outline-dark w-100 mb-3"><a class="p-0 nav-link text-light" asp-area="" asp-page="/Register">Sign In</a></button>
+                            <p class="text-center mb-3">or</p>
+                            <button type="button" class="d-flex  text-center align-items-center justify-content-center rounded-2 btn btn-dark w-100 /25">
+                                <img src="https://kaiber.ai/images/487d2d0a24351d59d4f7a116ba7f1236-google.svg" alt="Google Icon">
+                                <span class="text-white ">Sign in with Google</span>
+                            </button>
                         </form>
                     </div>
                 </div>
