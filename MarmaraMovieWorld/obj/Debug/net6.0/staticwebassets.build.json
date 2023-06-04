@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+hTdhUhj9+LbZWnTaPBQcrumU7MctJhCIyeomTvw47I=",
+  "Hash": "7lb2aMeCoFamLhiWAumJubP/cfq5rSSEY9/2SfnSnEg=",
   "Source": "MarmaraMovieWorld",
   "BasePath": "_content/MarmaraMovieWorld",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/obj/Debug/net6.0/scopedcss/projectbundle/MarmaraMovieWorld.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/.DS_Store",
+      "SourceId": "MarmaraMovieWorld",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/",
+      "BasePath": "_content/MarmaraMovieWorld",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/css/site.css",
