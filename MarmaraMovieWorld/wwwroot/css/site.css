@@ -8,10 +8,10 @@ html {
   }
 }
 
-html,body {
-  position: relative;
-  min-height: 100%;
-  background:black;
+html, body {
+    position: relative;
+    min-height: 100%;
+    background: dark;
 }
 
 
@@ -38,4 +38,18 @@ html,body {
     font-weight: 400;
     line-height: 1.5;
     
+}
+
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height:814px;
+    word-wrap: break-word;
+    text-align:center;
+    background-clip: border-box;
+    border: 1px solid #05035fa8;
+    box-shadow: 0rem 0rem 1rem 0px #05035fa8 !important;
+    color:white;
 }
