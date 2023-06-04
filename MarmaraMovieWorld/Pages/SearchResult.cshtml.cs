@@ -1,28 +1,32 @@
 using MarmaraMovieWorld.Model;
 using MarmaraMovieWorld.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MarmaraMovieWorld.Pages
-{
-    public class SearchModel : PageModel
+{ 
+    public class SearchResultModel : PageModel
     {
-        private readonly ILogger<SearchModel> _logger;
+        private readonly ILogger<SearchResultModel> _logger;
         private readonly TMDbService _tmdbService;
 
-        public SearchModel(ILogger<SearchModel> logger, TMDbService tmdbService)
+        public SearchResultModel(ILogger<SearchResultModel> logger, TMDbService tmdbService)
         {
             _logger = logger;
             _tmdbService = tmdbService;
         }
 
-        public SearchResult SearchResult { get; set; }
+        public Movie SearchResult { get; set; }
 
-        public async Task OnGet(string searchQuery)
+        public async Task<IActionResult> OnGet(string searchQuery)
         {
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 SearchResult = await _tmdbService.SearchMovies(searchQuery);
             }
+          
+            return Page();
         }
+
     }
 }

@@ -1,15 +1,12 @@
 ﻿@page
-@model SearchModel
-
-<form method="get">
-    <input type="text" name="searchQuery" placeholder="Search movies..." />
-    <button type="submit">Search</button>
-</form>
+@model MarmaraMovieWorld.Pages.SearchResultModel
+@{
+    ViewData["Title"] = Model.SearchResult.Title;
+}
 
 @if (Model.SearchResult != null)
 {
-    <h2>Search Result</h2>
-    <h3>@Model.SearchResult.Title</h3>
+    <h1>@Model.SearchResult.Title</h1>
     <p>@Model.SearchResult.Overview</p>
     <p>Release Date: @Model.SearchResult.Release_Date</p>
     @if (!string.IsNullOrEmpty(Model.SearchResult.Poster_Path))
@@ -19,7 +16,7 @@
     }
     else
     {
-        <p>Resim bulunamadı.</p>
+        <p>No pictures were found :(</p>
     }
 
     <h4>Other Details:</h4>
@@ -35,11 +32,7 @@
     </ul>
 
 }
-else if (Model.SearchResult == null)
-{
-    <p>No movies were found, sorry :(</p>
-}
 else
 {
-    <p>Start searching for movies!</p>
+    <p>No movies were found, sorry :(</p>
 }

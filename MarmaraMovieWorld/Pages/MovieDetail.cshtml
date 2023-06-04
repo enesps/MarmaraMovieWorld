@@ -1,0 +1,13 @@
+﻿@page
+@model MovieDetailModel
+@{
+    ViewData["Title"] = Model.Movie.Title;
+}
+
+<h1>@Model.Movie.Title</h1>
+@{
+    string url = "https://image.tmdb.org/t/p/original" + Model.Movie.Poster_Path;
+}
+<img src="@url" alt="Poster" width="200" height="300" />
+<p>Release Date: @Model.Movie.Release_Date</p>
+<p>Overview: @Model.Movie.Overview</p>

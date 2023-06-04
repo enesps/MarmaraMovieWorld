@@ -1,6 +1,6 @@
 ﻿namespace MarmaraMovieWorld.Model
 {
-    public class SearchResult
+    public class Movie
     {
         public bool Adult { get; set; }
         public string Backdrop_Path { get; set; }
