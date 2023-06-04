@@ -1,0 +1,6 @@
+﻿################################################################################
+# Bu .gitignore dosyası Microsoft(R) Visual Studio tarafından otomatik olarak oluşturulmuştur.
+################################################################################
+
+/MarmaraMovieWorld/obj/Debug/net6.0/MarmaraMovieWorld.GeneratedMSBuildEditorConfig.editorconfig
+/MarmaraMovieWorld/obj/project.nuget.cache

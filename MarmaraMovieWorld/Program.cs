@@ -1,7 +1,18 @@
+using MarmaraMovieWorld.Model;
+using MarmaraMovieWorld.Pages;
+using MarmaraMovieWorld.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<TMDbService>();
+builder.Services.AddHttpClient();
+builder.Services.Configure<ApiKeysOptions>(builder.Configuration.GetSection("ApiKeys")); // Yapýlandýrmayý ekleyin
+builder.Services.AddScoped<MovieDetailModel>();
+
+// Configuration
+var configuration = builder.Configuration;
 
 var app = builder.Build();
 
