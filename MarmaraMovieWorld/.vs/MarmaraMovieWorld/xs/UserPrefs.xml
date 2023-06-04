@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{7F9B403D-F16C-4BCA-AC6F-F1CD0798F0DA}|Default">
-  <MonoDevelop.Ide.ItemProperties.MarmaraMovieWorld PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MarmaraMovieWorld PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Login.cshtml">
     <Files>
-      <File FileName="Pages/Shared/_Layout.cshtml" Line="10" Column="1" IsPinned="True" />
-      <File FileName="Pages/Index.cshtml" Line="8" Column="50" />
-      <File FileName="Model/WikiModel.cs" Line="1" Column="1" />
-      <File FileName="Model/People.cs" Line="1" Column="1" />
-      <File FileName="wwwroot/css/site.css" Line="18" Column="4" />
-      <File FileName="Pages/Login.cshtml" Line="8" Column="171" />
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="13" Column="97" IsPinned="True" />
+      <File FileName="Pages/Index.cshtml" Line="8" Column="7" />
+      <File FileName="Pages/Login.cshtml" Line="36" Column="35" />
+      <File FileName="wwwroot/css/site.css" Line="30" Column="20" />
+      <File FileName="Program.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,6 +32,7 @@
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
                 <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -36,9 +41,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

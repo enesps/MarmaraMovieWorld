@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/favicon.ico",
-      "PackagePath": "staticwebassets/favicon.ico"
-    },
-    {
       "Id": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
@@ -195,6 +191,10 @@
     {
       "Id": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/lib/favicon.ico",
+      "PackagePath": "staticwebassets/lib/favicon.ico"
     },
     {
       "Id": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",

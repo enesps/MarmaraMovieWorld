@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JuYh3uo71MBWkKMEMEV5/LB7Car3tJzrKrr4NxDlqO4=",
+  "Hash": "+hTdhUhj9+LbZWnTaPBQcrumU7MctJhCIyeomTvw47I=",
   "Source": "MarmaraMovieWorld",
   "BasePath": "_content/MarmaraMovieWorld",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
-    },
-    {
-      "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/favicon.ico",
-      "SourceId": "MarmaraMovieWorld",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/",
-      "BasePath": "_content/MarmaraMovieWorld",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
       "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/js/site.js",
@@ -865,6 +848,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
+    },
+    {
+      "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/lib/favicon.ico",
+      "SourceId": "MarmaraMovieWorld",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/",
+      "BasePath": "_content/MarmaraMovieWorld",
+      "RelativePath": "lib/favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/favicon.ico"
     },
     {
       "Identity": "/Users/apple/Desktop/MarmaraMovieWorld/MarmaraMovieWorld/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
