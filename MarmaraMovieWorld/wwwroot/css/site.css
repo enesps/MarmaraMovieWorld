@@ -11,7 +11,7 @@ html {
 html, body {
     position: relative;
     min-height: 100%;
-    background: dark;
+    background: black;
 }
 
 
@@ -45,7 +45,7 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height:814px;
+    height:714px;
     word-wrap: break-word;
     text-align:center;
     background-clip: border-box;
