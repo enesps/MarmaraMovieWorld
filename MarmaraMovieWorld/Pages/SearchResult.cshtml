@@ -1,10 +1,21 @@
 ﻿@page
-@model MarmaraMovieWorld.Pages.SearchResultModel
-@{
+@model SearchResultModel
+{
+    ViewData["Title"] =  "Search Result";
+}
+@*@if ( Model.SearchResult != null)
+{
     ViewData["Title"] = Model.SearchResult.Title;
 }
-
-@if (Model.SearchResult != null)
+else
+{
+    ViewData["Title"] = "Movie Not Found";
+}*@
+@if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+{
+    <div class="alert alert-danger">@ViewData["ErrorMessage"]</div>
+}
+else
 {
     <h1>@Model.SearchResult.Title</h1>
     <p>@Model.SearchResult.Overview</p>

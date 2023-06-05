@@ -47,6 +47,8 @@ namespace MarmaraMovieWorld.Services
                 {
                     Console.WriteLine("No results found.");
                     return null;
+                    //return new Movie();
+                    
                 }
             }
             else
