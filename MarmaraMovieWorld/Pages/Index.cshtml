@@ -3,42 +3,25 @@
 @{
     ViewData["Title"] = "Marmara University Movie Platform";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
-<form asp-page-handler="PokeRequest" class="d-flex justify-content-center align-items-center " method="post">
-    <label>Pokemon ID:</label>
-    <input asp-for="PokeName" type="search" />
-    <button class="btn btn-primary">ARA</button>
+<form method="post">
+    <input type="text" name="searchQuery" placeholder="Search movies..." />
+    <button type="submit">Search</button>
 </form>
 
-@if (!string.IsNullOrEmpty(Model.photoPath))
-{
-    <div class="card d-flex justify-content-center align-items-center ">
-        <img class="card-img" src="@Model.photoPath" />
-
-    </div>
-}
-
-<div class="row row-cols-5">
-    @for (int i = 1; i < 151; i++)
+<h3>Popular Movies:</h3>
+    @foreach (var movie in Model.PopularMovies)
     {
-        path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + i + ".png";
-        <div class="card">
-            <img class="card-img" src="@path">
-        </div>
+        string url = "https://image.tmdb.org/t/p/original" + movie.Poster_Path;
+        <div class="row row-cols-5">
+            @*<a href="https://www.imdb.com">*@
+            <a href="MovieDetail?id=@movie.Id">
+                <div class="card">
+                        <img src="@url" alt="Poster" class="card-img-top" width="200" height="300" />
+                        <div class="card-body">
+                            <h5 class="card-title">@movie.Title</h5>
+                            <p class="card-text">Release Date: @movie.Release_Date</p>
+                        </div>
+                </div>
+            </a>
+        </div>  
     }
-</div>
-<div class="row row-cols-5">
-    @for (int i = 1; i < 151; i++)
-    {
-        path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + i + ".png";
-        <div class="card">
-            <img class="card-img" src="@path">
-        </div>
-    }
-</div>
