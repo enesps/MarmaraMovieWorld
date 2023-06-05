@@ -4,41 +4,34 @@
     ViewData["Title"] = "Marmara University Movie Platform";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="layout d-flex flex-column align-items-center " style="--bs-bg-opacity: .7; padding-top: 120px;">
+
+    <h2 class="m-3 text-light">Popular Movies</h2>
+
+    <form method="post" class="d-flex mb-4">
+        <input type="text" class="text-white login-input bg-dark border border-dark rounded-2" style="--bs-bg-opacity: .7;" name="searchQuery" placeholder="Search movies..." />
+        <button type="submit" class="btn btn-dark mx-2">Search</button>
+    </form>
 
 
-<form asp-page-handler="PokeRequest" class="d-flex justify-content-center align-items-center " method="post">
-    <label>Pokemon ID:</label>
-    <input asp-for="PokeName" type="search" />
-    <button class="btn btn-primary">ARA</button>
-</form>
-
-@if (!string.IsNullOrEmpty(Model.photoPath))
-{
-    <div class="card d-flex justify-content-center align-items-center ">
-        <img class="card-img" src="@Model.photoPath" />
-
+    <div class="container">
+        <div class="row mt-3">
+            @foreach (var movie in Model.PopularMovies)
+            {
+                string url = "https://image.tmdb.org/t/p/original" + movie.Poster_Path;
+                <div class="col-md-4">
+                    <a href="MovieDetail?id=@movie.Id" class="nav-link">
+                        <div class="movie-card mb-5 relative bg-dark border-dark " style="--bs-bg-opacity: .3;">
+                            <img src="@url" alt="Poster" class="card-img-top absolute " width="100%" height="75%" />
+                            <div class="card-body">
+                                <h5 class="card-title">@movie.Title</h5>
+                                <p class="card-text">Release Date: @movie.Release_Date</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
     </div>
-}
 
-<div class="row row-cols-5">
-    @for (int i = 1; i < 151; i++)
-    {
-        path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + i + ".png";
-        <div class="card">
-            <img class="card-img" src="@path">
-        </div>
-    }
-</div>
-<div class="row row-cols-5">
-    @for (int i = 1; i < 151; i++)
-    {
-        path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + i + ".png";
-        <div class="card">
-            <img class="card-img" src="@path">
-        </div>
-    }
 </div>
