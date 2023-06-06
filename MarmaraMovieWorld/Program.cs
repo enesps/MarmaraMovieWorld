@@ -1,11 +1,15 @@
 using MarmaraMovieWorld.Model;
 using MarmaraMovieWorld.Pages;
 using MarmaraMovieWorld.Services;
+using Auth0.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MarmaraMovieWorld.Data;
+using MarmaraMovieWorld;
 
 var builder = WebApplication.CreateBuilder(args);
+// Configuration
+var configuration = builder.Configuration;
+
 //var connectionString = builder.Configuration.GetConnectionString("MarmaraMovieWorldContextConnection") ?? throw new InvalidOperationException("Connection string 'MarmaraMovieWorldContextConnection' not found.");
 
 //builder.Services.AddDbContext<MarmaraMovieWorldContext>(options =>
@@ -15,20 +19,21 @@ var builder = WebApplication.CreateBuilder(args);
 //    .AddEntityFrameworkStores<MarmaraMovieWorldContext>();
 
 // Add services to the container
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(); builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizePage("/Account/Logout");
+    options.Conventions.AuthorizePage("/Account/Profile");
+}); 
 builder.Services.AddScoped<TMDbService>();
 builder.Services.AddHttpClient();
 builder.Services.Configure<ApiKeysOptions>(builder.Configuration.GetSection("ApiKeys")); // Yap�land�rmay� ekleyin
 builder.Services.AddScoped<MovieDetailModel>();
-
-// Configuration
-var configuration = builder.Configuration;
-
-//builder.Services.AddAuthentication().AddGoogle(googleOptions =>
-//{
-//    googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
-//    googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
-//});
+builder.Services
+    .AddAuth0WebAppAuthentication(options => {
+        options.Domain = builder.Configuration["Auth0:Domain"];
+        options.ClientId = builder.Configuration["Auth0:ClientId"];
+        options.Scope = "openid profile email";
+    });
 
 var app = builder.Build();
 
@@ -44,6 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 app.UseAuthentication();;
 
 app.UseAuthorization();
