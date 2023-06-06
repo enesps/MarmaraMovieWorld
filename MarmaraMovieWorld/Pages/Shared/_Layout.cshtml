@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MarmaraMovieWorld.styles.css" asp-append-version="true" />
 </head>
-<body class="bg-black" style="--bs-bg-opacity: .7;">
+<body class="bg-black " style="--bs-bg-opacity: .7;">
    <header>
         <nav class=" navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black fixed-top center mt-3  border-dark "  style="--bs-bg-opacity: .7; box-shadow: 0rem 0rem 4rem 20px #060660c2 !important; ">
             <div class="container d-flex">
@@ -21,7 +21,7 @@
 
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light mx-3 px-3 border border-dark rounded-2 home-btn "  asp-area="" asp-page="/Index" >HOME</a>
+                            <a class="nav-link text-light mx-3 px-3 border border-dark rounded-3 home-btn "  asp-area="" asp-page="/Index" >HOME</a>
                         </li>
                             @if (User.Identity.IsAuthenticated)
                             {

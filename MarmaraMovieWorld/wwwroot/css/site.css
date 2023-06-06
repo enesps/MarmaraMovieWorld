@@ -9,7 +9,8 @@ html, body {
     position: relative;
     min-height: 100%;
     background: black;
-  
+    background-image: linear-gradient(to left bottom,rgba(10,12,15,0.9),black), url('https://wallpaperaccess.com/full/3658597.jpg');
+    background-repeat: repeat-y;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -37,6 +38,10 @@ html, body {
 .padding-auto {
 width:100%;
 }
+
+.home-btn {
+    font-size: 12px;
+}
 .home-btn:hover {
     box-shadow: 0rem 0rem 1rem 1px black !important;
 
@@ -58,6 +63,7 @@ nav {
 
 .layout {
     height: 100%;
+  
 }
 
 .background-image {
