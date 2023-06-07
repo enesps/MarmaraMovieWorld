@@ -47,6 +47,10 @@ width:100%;
 
 }
 
+.comment-container {
+    border-radius: 10px;
+}
+
 nav {
     max-width: 1000px;
     border-radius: 10px;
