@@ -3,15 +3,6 @@
 @{
     ViewData["Title"] = "Marmara University Movie Platform";
 }
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="alert alert-danger">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-        {
-            <span>@error.ErrorMessage</span>
-        }
-    </div>
-}
 
 <div class="layout d-flex flex-column align-items-center " style="--bs-bg-opacity: .7; padding-top: 120px;">
     <div class="padding-auto d-flex flex-column">

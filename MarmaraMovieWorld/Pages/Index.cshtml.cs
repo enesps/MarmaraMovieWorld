@@ -36,21 +36,15 @@ namespace MarmaraMovieWorld.Pages
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = "Movie couldn't be found.";
-
-                    PopularMovies = await _tmdbService.GetPopularMovies();
-                    return Page();
+                    TempData["StatusMessage"] = "Movie couldn't be found:(";
+                    Console.Write("MESSAGE\n");
+                    return RedirectToPage("Index");
                 }
             }
 
             PopularMovies = await _tmdbService.GetPopularMovies();
 
-            if (TempData.ContainsKey("ErrorMessage"))
-            {
-                ModelState.AddModelError(string.Empty, TempData["ErrorMessage"].ToString());
-            }
             return Page();
-
         }
 
     }
