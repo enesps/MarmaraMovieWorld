@@ -18,11 +18,9 @@ namespace MarmaraMovieWorld.Pages
 
         public Movie SearchResult { get; set; }
         public string ErrorMessage { get; set; }
-        public bool isSearched { get; set; } = false;
         public List<Movie> PopularMovies { get; set; }
         public async Task OnGet()
         {
-            isSearched = false;
             PopularMovies = await _tmdbService.GetPopularMovies();
         }
 
@@ -31,13 +29,23 @@ namespace MarmaraMovieWorld.Pages
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 SearchResult = await _tmdbService.SearchMovies(searchQuery);
-                return RedirectToPage("SearchResult", new { searchQuery });
+
+                if (SearchResult != null && SearchResult.Id > 0)
+                {
+                    return RedirectToPage("MovieDetail", new { id = SearchResult.Id });
+                }
+                else
+                {
+                    TempData["StatusMessage"] = "Movie couldn't be found:(";
+                    Console.Write("MESSAGE\n");
+                    return RedirectToPage("Index");
+                }
             }
 
             PopularMovies = await _tmdbService.GetPopularMovies();
 
             return Page();
         }
- 
+
     }
 }
