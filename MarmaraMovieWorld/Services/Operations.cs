@@ -86,13 +86,63 @@ namespace MarmaraMovieWorld.Services
             {
                 UserId = userId,
                 MovieId = movieId,
-                Text = commentText,
+                Content = commentText,
                 CreatedAt = DateTime.Now
             };
 
             _dbContext.Comments.Add(comment);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<List<CommentViewModel>> GetCommentsForMovie(int movieId)
+        {
+            var comments = await _dbContext.Comments
+                .Where(c => c.MovieId == movieId)
+                .ToListAsync();
+
+            var commentViewModels = new List<CommentViewModel>();
+            foreach (var comment in comments)
+            {
+                var Name = await GetName(comment.UserId);
+
+                var commentViewModel = new CommentViewModel
+                {
+                    Id = comment.Id,
+                    UserId = comment.UserId,
+                    Content = comment.Content,
+                    Name = Name,
+                    CreatedAt = comment.CreatedAt
+                };
+
+                commentViewModels.Add(commentViewModel);
+            }
+
+            return commentViewModels;
+        }
+
+        public async Task<string> GetName(string userId)
+        {
+            // Kullanıcı adını almak için ilgili veritabanı sorgularını yapın
+            // Örnek olarak, EF Core kullanarak Users tablosundan kullanıcı adını alabilirsiniz
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Id.ToString() == userId);
+            Console.WriteLine(user?.Name);
+            // Kullanıcı adını döndürün
+            return user?.Name;
+        }
+
+        public async Task DeleteComment(int commentId, string userId)
+        {
+            Console.WriteLine("ddddelete comment");
+            var comment = await _dbContext.Comments.FindAsync(commentId);
+            // Console.WriteLine(comment.UserId , " " , userId );
+            if (comment != null && comment.UserId == userId)
+            {
+                Console.WriteLine("IF delete comment");
+                _dbContext.Comments.Remove(comment);
+                await _dbContext.SaveChangesAsync();
+            }
+        }
+
 
     }
 

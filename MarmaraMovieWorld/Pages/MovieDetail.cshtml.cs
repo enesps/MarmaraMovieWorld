@@ -3,6 +3,7 @@ using MarmaraMovieWorld.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
+using System.Xml.Linq;
 
 namespace MarmaraMovieWorld.Pages
 {
@@ -19,10 +20,21 @@ namespace MarmaraMovieWorld.Pages
             _operationsService = operationsService;
         }
 
+        public string userId { get; set; }
         public Movie Movie { get; set; }
         public int LikeCount { get; set; }
+        public List<Comment> Comments { get; set; }
+        public List<CommentViewModel> ViewComments { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int id)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                // Kullanýcýnýn kimliðini alýn
+                userId = await _operationsService.GetCurrentUserId(User);
+                Console.WriteLine("USER ID: ", userId);
+            }
+
             if (id > 0)
             {
                 Movie = await _tmdbService.GetMovieDetails(id);
@@ -34,6 +46,7 @@ namespace MarmaraMovieWorld.Pages
 
                 // Beðeni sayýsýný al
                 LikeCount = await _operationsService.GetLikeCountForMovie(id);
+                ViewComments = await _operationsService.GetCommentsForMovie(id);
             }
             else
             {
@@ -45,12 +58,13 @@ namespace MarmaraMovieWorld.Pages
         }
 
 
+
         public async Task<IActionResult> OnPostLike(int movieId)
         {
             if (User.Identity.IsAuthenticated)
             {
                 // Kullanýcý giriþ yapmýþsa iþlemleri gerçekleþtir
-                var userId = await _operationsService.GetCurrentUserId(User);
+                userId = await _operationsService.GetCurrentUserId(User);
                 await _operationsService.LikeMovie(userId, movieId);
 
                 // Kullanýcýnýn bilgilerini konsola yazdýr
@@ -71,16 +85,53 @@ namespace MarmaraMovieWorld.Pages
 
         public async Task<IActionResult> OnPostComment(int movieId, string commentText)
         {
-            // Kullanýcýnýn kimliðini alýn
-            var userId = await _operationsService.GetCurrentUserId(User);
 
-            // Comment ekleme iþlemini gerçekleþtirin
-            await _operationsService.AddComment(userId, movieId, commentText);
+            Console.WriteLine("onpostcomment");
 
-            // Yönlendirme veya diðer iþlemler
-            return RedirectToPage("MovieDetail", new { id = movieId });
+            if (User.Identity.IsAuthenticated)
+            {
+                // Kullanýcýnýn kimliðini alýn
+                userId = await _operationsService.GetCurrentUserId(User);
+
+                // Comment ekleme iþlemini gerçekleþtirin
+                await _operationsService.AddComment(userId, movieId, commentText);
+            }
+            else
+            {
+                // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
+                return RedirectToPage("Login");
+            }
+
+            //return RedirectToPage("MovieDetail", new { id = movieId });
+            return RedirectToPage("Index");
         }
 
+        public async Task<IActionResult> OnPostDeleteComment(int commentId)
+        {
+            Console.WriteLine("delete comment");
+
+            if (User.Identity.IsAuthenticated)
+            {
+                // Kullanýcýnýn kimliðini alýn
+                userId = await _operationsService.GetCurrentUserId(User);
+
+                // Comment silme iþlemini gerçekleþtirin
+                Console.WriteLine("userId in postdeletecomment: ", userId);
+                // Comment ekleme iþlemini gerçekleþtirin
+                await _operationsService.DeleteComment(commentId, userId);
+            }
+            else
+            {
+                // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
+                return RedirectToPage("Login");
+            }
+           
+            // Kullanýcýnýn kimliðini alýn
+            //var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            
+            // Yönlendirme veya diðer iþlemler
+            return RedirectToPage("Index");
+        }
 
     }
 

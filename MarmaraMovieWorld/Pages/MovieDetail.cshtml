@@ -18,14 +18,7 @@
             <button type="submit" class="btn btn-primary" asp-page-handler="Like" asp-route-movieId="@Model.Movie.Id">Like</button>
         </form>
         <p>Like Count: @Model.LikeCount</p>
-        <form method="post" asp-page-handler="Comment">
-            <input type="hidden" name="movieId" value="@Model.Movie.Id" />
-            <div class="form-group">
-                <label for="commentText">Yorumunuz:</label>
-                <textarea class="form-control" name="commentText" id="commentText" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Yorum Ekle</button>
-        </form>
+        
 </div>
 </div>
 
@@ -34,7 +27,67 @@
         <div class="comment-container card text-white bg-black border-dark rounded-5" style="--bs-bg-opacity: .4; box-shadow: 0rem 0rem 3rem 20px #060660c2 !important; ">
                 <div class="card-body p-4">
                     <h4 class="mb-0">Comments</h4>
+                <div class="card-body p-4">
+                    <div class="d-flex flex-start">
+                        <form method="post" >
+                            <input type="hidden" name="movieId" value="@Model.Movie.Id" />
+                            <div class="form-group">
+                                <label for="commentText">Yorumunuz:</label>
+                                <textarea class="form-control" name="commentText" id="commentText" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id">Yorum Ekle</button>
+                        </form>
+                    </div>
+                </div>
 
+                @foreach (var comment in Model.ViewComments)
+                {
+                    <div class="card-body p-4">
+                        <div class="d-flex flex-start">
+                            <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60" height="60" />
+                            <div>
+                                <h6 class="fw-bold mb-1">@comment.Name</h6>
+                                <div class="d-flex align-items-center mb-3">
+                                    <p class="mb-0">
+                                        @comment.CreatedAt.ToString("MMMM dd, yyyy")
+                                    </p>
+                                </div>
+                                <p class="mb-0">
+                                    @comment.Content
+                                </p>
+                                @if (User.Identity.IsAuthenticated && comment.UserId == Model.userId)
+                                {
+                                    <form method="post" asp-page-handler="DeleteComment" asp-route-commentId="@comment.Id">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+@*                @foreach (var comment in Model.ViewComments)
+                {
+                    <div class="card-body p-4">
+                        <div class="d-flex flex-start">
+                            <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60" height="60" />
+                            <div>
+                                <h6 class="fw-bold mb-1">@comment.Name</h6>
+                                <div class="d-flex align-items-center mb-3">
+                                    <p class="mb-0">
+                                        @comment.CreatedAt.ToString("MMMM dd, yyyy")
+                                    </p>
+                                </div>
+                                <p class="mb-0">
+                                    @comment.Content
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }*@
+
+                </div>
                 <div class="card-body p-4">
                     <div class="d-flex flex-start">
                         <img class="rounded-circle shadow-1-strong me-3"
