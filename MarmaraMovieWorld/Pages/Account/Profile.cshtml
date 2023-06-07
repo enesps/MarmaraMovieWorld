@@ -1,24 +1,26 @@
 ﻿@page
 @model acme.Pages.ProfileModel
 @{
-    ViewData["Title"] = "User Profile";
+    ViewData["Title"] = "Profile";
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="row">
-            <h2>@ViewData["Title"].</h2>
+<div class="layout mt-5 text-white">
 
-            <div class="col-md-2">
-                <img src="@Model.UserProfileImage"
-                     alt="" class="img-rounded img-responsive" />
-            </div>
-            <div class="col-md-4">
-                <h3>@Model.UserName</h3>
+    <div class="mt-5 ">
+       
+            
+
+        <div class="col-md-2 m-5 pt-5 d-flex flex-column">
+            <h2 class="my-5 pt-5">@ViewData["Title"]</h2>
+            <img class="" src="@Model.UserProfileImage"
+                 alt="" class="img-rounded img-responsive" />
+            <div class="mt-5 pb-5">
+                <h3>Mail Adress</h3>
                 <p>
-                    <i class="glyphicon glyphicon-envelope"></i> @Model.UserEmailAddress
+                    <i class="glyphicon glyphicon-envelope mb-5"></i> @Model.UserEmailAddress
                 </p>
             </div>
         </div>
-    </div>
-</div>
+            
+   
+</div></div>

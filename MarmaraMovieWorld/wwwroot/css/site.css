@@ -9,7 +9,7 @@ html, body {
     position: relative;
     min-height: 100%;
     background: black;
-    background-image: linear-gradient(to left bottom,rgba(10,12,15,0.9),black), url('https://wallpaperaccess.com/full/3658597.jpg');
+    background-image: linear-gradient(to left bottom,rgba(10,12,15,0.8),black), url('https://wallpaperaccess.com/full/3658597.jpg');
     background-repeat: repeat-y;
 }
 ::-webkit-scrollbar {

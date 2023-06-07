@@ -26,19 +26,14 @@
                             @if (User.Identity.IsAuthenticated)
                             {
 
-                              <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                  <a class="nav-link text-dark display-6" asp-area=""
-                                     asp-page="/Account/Profile">Profile</a>
-                                </li>
-                              </ul>
+                              
                             <li class="nav-item">
-                                <a class="nav-link text-dark display-6"
-                                   asp-page="/Account/Profile">Hello @User.Identity.Name!</a>
+                                <a class="nav-link text-light mx-3 px-3 border border-dark rounded-3 home-btn "
+                                   asp-page="/Account/Profile"> @User.Identity.Name</a>
                             </li>
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark display-6" asp-area=""
+                                    <a class="nav-link text-light mx-3 px-3 btn btn-dark home-btn " style="--bs-bg-opacity: .7; " asp-area=""
                                        asp-page="/Account/Logout">Logout</a>
                                 </li>
                             </ul>
