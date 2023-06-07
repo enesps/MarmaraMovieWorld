@@ -27,6 +27,12 @@ namespace MarmaraMovieWorld.Pages
                 {
                     return RedirectToPage("MovieDetail", new { id = SearchResult.Id });
                 }
+                else
+                {
+                    TempData["StatusMessage"] = "Movie couldn't be found:(";
+                    Console.Write("MESSAGE");
+                    return RedirectToPage("Index");
+                }
             }
 
             return Page();

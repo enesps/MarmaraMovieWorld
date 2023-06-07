@@ -18,11 +18,9 @@ namespace MarmaraMovieWorld.Pages
 
         public Movie SearchResult { get; set; }
         public string ErrorMessage { get; set; }
-        public bool isSearched { get; set; } = false;
         public List<Movie> PopularMovies { get; set; }
         public async Task OnGet()
         {
-            isSearched = false;
             PopularMovies = await _tmdbService.GetPopularMovies();
         }
 

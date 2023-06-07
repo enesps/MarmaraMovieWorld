@@ -76,7 +76,7 @@ namespace MarmaraMovieWorld.Pages
             else
             {
                 // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
-                return RedirectToPage("Login");
+                return RedirectToPage("Account/Login");
             }
 
             // Yönlendirme veya diðer iþlemler
@@ -99,7 +99,7 @@ namespace MarmaraMovieWorld.Pages
             else
             {
                 // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
-                return RedirectToPage("Login");
+                return RedirectToPage("Account/Login");
             }
 
             return RedirectToPage("MovieDetail", new { id = movieId });
@@ -122,7 +122,7 @@ namespace MarmaraMovieWorld.Pages
             else
             {
                 // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
-                return RedirectToPage("Login");
+                return RedirectToPage("Account/Login");
             }
 
             return RedirectToPage("MovieDetail", new { id = movieId });
