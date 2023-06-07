@@ -35,9 +35,9 @@
                 <div class="card-body p-4">
                     <div class="d-flex flex-start">
                         <form method="post">
-                                <label for="commentText" class="form-label">Your comments: </label>
-                                <input type="text" class="text-white login-input bg-dark border border-dark w-75" name="commentText" style="--bs-bg-opacity: .7;" rows="3" required>
-                                <a type="submit" class="btn " asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id"><i class="fa fa-paper-plane" style="border-color:white; color:#2196F3" aria-hidden="true"></i></a>
+                            <label for="commentText" class="form-label">Your comments: </label>
+                            <textarea type="text" class="text-white  bg-dark border border-dark w-75 " name="commentText" style="--bs-bg-opacity: .7;" rows="3" required></textarea>
+                            <a type="submit" class="btn " asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id"><i class="fa fa-paper-plane" style="border-color:white; color:#2196F3" aria-hidden="true"></i></a>
                         </form>
                     </div>
                 </div>
