@@ -35,12 +35,9 @@
                 <div class="card-body p-4">
                     <div class="d-flex flex-start">
                         <form method="post">
-                            <input type="hidden" name="movieId" value="@Model.Movie.Id" />
-                            <div class="form-group mb-1">
-                                <label class="mt-b" for="commentText">Yorumunuz:</label>
-                                <textarea class="form-control" name="commentText" id="commentText" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id">Yorum Ekle</button>
+                                <label for="commentText" class="form-label">Your comments: </label>
+                                <input type="text" class="text-white login-input bg-dark border border-dark w-75" name="commentText" style="--bs-bg-opacity: .7;" rows="3" required>
+                                <a type="submit" class="btn " asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id"><i class="fa fa-paper-plane" style="border-color:white; color:#2196F3" aria-hidden="true"></i></a>
                         </form>
                     </div>
                 </div>
