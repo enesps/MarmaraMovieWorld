@@ -5,16 +5,20 @@
       "PackagePath": "staticwebassets\\MarmaraMovieWorld.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\.DS_Store",
+      "PackagePath": "staticwebassets\\.DS_Store"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\.DS_Store",
+      "PackagePath": "staticwebassets\\lib\\.DS_Store"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -195,6 +199,14 @@
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\favicon.ico",
+      "PackagePath": "staticwebassets\\lib\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\img\\logo.png",
+      "PackagePath": "staticwebassets\\lib\\img\\logo.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MarmaraMovieWorld\\MarmaraMovieWorld\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
