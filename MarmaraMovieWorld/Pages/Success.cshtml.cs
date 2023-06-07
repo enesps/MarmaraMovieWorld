@@ -32,8 +32,8 @@ namespace acme.Pages
 
             if (authenticateResult.Succeeded)
             {
-                
-                var email = authenticateResult.Principal.FindFirstValue("email");
+
+                var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
                 string name = authenticateResult.Principal.FindFirstValue("name");
 
                 Console.WriteLine(email);
@@ -46,6 +46,7 @@ namespace acme.Pages
 
                     if (existingUser == null)
                     {
+                        Console.WriteLine("yeni user");
                         // Kullanýcý user tablosunda bulunamadý, yeni bir kullanýcý ekleyebilirsiniz
 
                         var newUser = new User
@@ -57,6 +58,8 @@ namespace acme.Pages
 
                         _dbContext.Users.Add(newUser);
                         await _dbContext.SaveChangesAsync();
+
+                        Console.WriteLine("kullanýcý eklendi");
 
                         // Yeni kullanýcý baþarýyla eklendi, gerekli iþlemleri yapabilirsiniz
                     }
