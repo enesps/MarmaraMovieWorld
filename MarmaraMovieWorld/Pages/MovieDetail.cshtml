@@ -14,10 +14,15 @@
     <p>Release Date: @Model.Movie.Release_Date</p>
     <p>Popularity: @Model.Movie.Popularity</p>
     <p>Overview: @Model.Movie.Overview</p>
+    <div class="d-flex align-items-center like ">
         <form method="post">
-            <button type="submit" class="btn btn-primary" asp-page-handler="Like" asp-route-movieId="@Model.Movie.Id">Like</button>
+            <button type="submit" class="btn " asp-page-handler="Like" asp-route-movieId="@Model.Movie.Id">
+                <img style="height:55px;" src="~/lib/img/Like.png" alt="Like Logo">
+            </button>
         </form>
-        <p>Like Count: @Model.LikeCount</p>
+        <p style="margin-bottom:0px;font-size:20px;">@Model.LikeCount</p>
+    </div>
+        
         
 </div>
 </div>
