@@ -17,16 +17,21 @@ namespace MarmaraMovieWorld.Pages
         }
 
         public Movie SearchResult { get; set; }
-
         public async Task<IActionResult> OnGet(string searchQuery)
         {
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 SearchResult = await _tmdbService.SearchMovies(searchQuery);
+
+                if (SearchResult != null && SearchResult.Id > 0)
+                {
+                    return RedirectToPage("MovieDetail", new { id = SearchResult.Id });
+                }
             }
-          
+
             return Page();
         }
+
 
 
     }

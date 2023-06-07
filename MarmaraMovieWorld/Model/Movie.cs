@@ -14,7 +14,7 @@
         public string Release_Date { get; set; }
         public string Title { get; set; }
         public bool Video { get; set; }
-        public double VoteAverage { get; set; }
-        public int VoteCount { get; set; }
+        public double Vote_Average { get; set; }
+        public int Vote_Count { get; set; }
     }
 }
