@@ -30,11 +30,11 @@
 <div class=" d-flex justify-content-center my-5 py-5 ">
     <div class="col-md-12 col-lg-10 ">
         <div class="comment-container card text-white bg-black border-dark rounded-5" style="--bs-bg-opacity: .4; box-shadow: 0rem 0rem 3rem 20px #060660c2 !important; ">
-                <div class="card-body p-4">
-                    <h4 class="mb-0">Comments</h4>
+            <div class="card-body p-4">
+                <h4 class="mb-0">Comments</h4>
                 <div class="card-body p-4">
                     <div class="d-flex flex-start">
-                        <form method="post" >
+                        <form method="post">
                             <input type="hidden" name="movieId" value="@Model.Movie.Id" />
                             <div class="form-group">
                                 <label for="commentText">Yorumunuz:</label>
@@ -49,7 +49,7 @@
                 {
                     <div class="card-body p-4">
                         <div class="d-flex flex-start">
-                            <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60" height="60" />
+                            <img class="rounded-circle shadow-1-strong me-3" src="@Model.UserProfileImage" alt="avatar" width="60" height="60" />
                             <div>
                                 <h6 class="fw-bold mb-1">@comment.Name</h6>
                                 <div class="d-flex align-items-center mb-3">
@@ -62,121 +62,43 @@
                                 </p>
                                 @if (User.Identity.IsAuthenticated && comment.UserId == Model.userId)
                                 {
-                                    <form method="post" asp-page-handler="DeleteComment" asp-route-movieId="@Model.Movie.Id"  asp-route-commentId="@comment.Id">
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    <form method="post" asp-page-handler="DeleteComment" asp-route-movieId="@Model.Movie.Id" asp-route-commentId="@comment.Id">
+                                        <button type="submit" class="btn btn-dark text-white">Delete</button>
                                     </form>
                                 }
                             </div>
                         </div>
                     </div>
+                    <hr class="my-0" />
                 }
 
 
-@*                @foreach (var comment in Model.ViewComments)
-                {
-                    <div class="card-body p-4">
-                        <div class="d-flex flex-start">
-                            <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60" height="60" />
-                            <div>
-                                <h6 class="fw-bold mb-1">@comment.Name</h6>
-                                <div class="d-flex align-items-center mb-3">
-                                    <p class="mb-0">
-                                        @comment.CreatedAt.ToString("MMMM dd, yyyy")
-                                    </p>
-                                </div>
-                                <p class="mb-0">
-                                    @comment.Content
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                }*@
-
-                </div>
-                <div class="card-body p-4">
-                    <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60"
-                             height="60" />
-                        <div>
-                            <h6 class="fw-bold mb-1">Lara Stewart</h6>
-                            <div class="d-flex align-items-center mb-3">
-                                <p class="mb-0">
-                                    March 15, 2021
-                                </p>
-                            </div>
+                @*                @foreach (var comment in Model.ViewComments)
+        {
+            <div class="card-body p-4">
+                <div class="d-flex flex-start">
+                    <img class="rounded-circle shadow-1-strong me-3" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60" height="60" />
+                    <div>
+                        <h6 class="fw-bold mb-1">@comment.Name</h6>
+                        <div class="d-flex align-items-center mb-3">
                             <p class="mb-0">
-                                Great!
+                                @comment.CreatedAt.ToString("MMMM dd, yyyy")
                             </p>
                         </div>
+                        <p class="mb-0">
+                            @comment.Content
+                        </p>
                     </div>
                 </div>
+            </div>
+        }*@
 
-                <hr class="my-0" />
+            </div>
+               
 
-                <div class="card-body p-4">
-                    <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60"
-                             height="60" />
-                        <div>
-                            <h6 class="fw-bold mb-1">Lara Stewart</h6>
-                            <div class="d-flex align-items-center mb-3">
-                                <p class="mb-0">
-                                    March 15, 2021
-                                </p>
-                                
-                            </div>
-                            <p class="mb-0">
-                               I like this movie
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              
 
-                <hr class="my-0" style="height: 1px;" />
-
-                <div class="card-body p-4">
-                    <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp" alt="avatar" width="60"
-                             height="60" />
-                        <div>
-                            <h6 class="fw-bold mb-1">Alexa Bennett</h6>
-                            <div class="d-flex align-items-center mb-3">
-                                <p class="mb-0">
-                                    March 24, 2021
-                                </p>
-                               
-                            </div>
-                            <p class="mb-0">
-                                Lorem ipsum
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="my-0" />
-
-                <div class="card-body p-4">
-                    <div class="d-flex flex-start">
-                        <img class="rounded-circle shadow-1-strong me-3"
-                             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(24).webp" alt="avatar" width="60"
-                             height="60" />
-                        <div>
-                            <h6 class="fw-bold mb-1">Betty Walker</h6>
-                            <div class="d-flex align-items-center mb-3">
-                                <p class="mb-0">
-                                    March 30, 2021
-                                </p>
-                                
-                            </div>
-                            <p class="mb-0">
-                               Great work!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
