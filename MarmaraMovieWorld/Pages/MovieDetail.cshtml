@@ -36,8 +36,8 @@
                     <div class="d-flex flex-start">
                         <form method="post">
                             <input type="hidden" name="movieId" value="@Model.Movie.Id" />
-                            <div class="form-group">
-                                <label for="commentText">Yorumunuz:</label>
+                            <div class="form-group mb-1">
+                                <label class="mt-b" for="commentText">Yorumunuz:</label>
                                 <textarea class="form-control" name="commentText" id="commentText" rows="3"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary" asp-page-handler="Comment" asp-route-movieId="@Model.Movie.Id">Yorum Ekle</button>
@@ -62,8 +62,8 @@
                                 </p>
                                 @if (User.Identity.IsAuthenticated && comment.UserId == Model.userId)
                                 {
-                                    <form method="post" asp-page-handler="DeleteComment" asp-route-movieId="@Model.Movie.Id" asp-route-commentId="@comment.Id">
-                                        <button type="submit" class="btn btn-dark text-white">Delete</button>
+                                    <form class="mt-1" method="post" asp-page-handler="DeleteComment" asp-route-movieId="@Model.Movie.Id" asp-route-commentId="@comment.Id">
+                                        <button type="submit" class="btn btn-primary text-white">Delete</button>
                                     </form>
                                 }
                             </div>
