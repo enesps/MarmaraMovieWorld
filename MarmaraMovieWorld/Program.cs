@@ -16,12 +16,12 @@ builder.Services.AddRazorPages(); builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AuthorizePage("/Account/Logout");
     options.Conventions.AuthorizePage("/Account/Profile");
-    options.Conventions.AuthorizePage("/Callback");
 });
 builder.Services.AddDbContext<ApplicationDbContext>(options=> options.UseSqlServer(
         configuration.GetConnectionString("DefaultConnection")
         ));
 builder.Services.AddScoped<TMDbService>();
+builder.Services.AddScoped<OperationsService>();
 builder.Services.AddHttpClient();
 builder.Services.Configure<ApiKeysOptions>(builder.Configuration.GetSection("ApiKeys")); // Yap�land�rmay� ekleyin
 builder.Services.AddScoped<MovieDetailModel>();

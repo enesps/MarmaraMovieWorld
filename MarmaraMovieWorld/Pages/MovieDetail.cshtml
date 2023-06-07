@@ -14,8 +14,21 @@
     <p>Release Date: @Model.Movie.Release_Date</p>
     <p>Popularity: @Model.Movie.Popularity</p>
     <p>Overview: @Model.Movie.Overview</p>
+        <form method="post">
+            <button type="submit" class="btn btn-primary" asp-page-handler="Like" asp-route-movieId="@Model.Movie.Id">Like</button>
+        </form>
+        <p>Like Count: @Model.LikeCount</p>
+        <form method="post" asp-page-handler="Comment">
+            <input type="hidden" name="movieId" value="@Model.Movie.Id" />
+            <div class="form-group">
+                <label for="commentText">Yorumunuz:</label>
+                <textarea class="form-control" name="commentText" id="commentText" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Yorum Ekle</button>
+        </form>
 </div>
 </div>
+
 <div class=" d-flex justify-content-center my-5 py-5 ">
     <div class="col-md-12 col-lg-10 ">
         <div class="comment-container card text-white bg-black border-dark rounded-5" style="--bs-bg-opacity: .4; box-shadow: 0rem 0rem 3rem 20px #060660c2 !important; ">
