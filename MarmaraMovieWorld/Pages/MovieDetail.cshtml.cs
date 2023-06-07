@@ -80,7 +80,7 @@ namespace MarmaraMovieWorld.Pages
             }
 
             // Yönlendirme veya diðer iþlemler
-            return RedirectToPage("Index");
+            return RedirectToPage("MovieDetail", new { id = movieId });
         }
 
         public async Task<IActionResult> OnPostComment(int movieId, string commentText)
@@ -102,11 +102,10 @@ namespace MarmaraMovieWorld.Pages
                 return RedirectToPage("Login");
             }
 
-            //return RedirectToPage("MovieDetail", new { id = movieId });
-            return RedirectToPage("Index");
+            return RedirectToPage("MovieDetail", new { id = movieId });
         }
 
-        public async Task<IActionResult> OnPostDeleteComment(int commentId)
+        public async Task<IActionResult> OnPostDeleteComment(int commentId, int movieId)
         {
             Console.WriteLine("delete comment");
 
@@ -125,12 +124,8 @@ namespace MarmaraMovieWorld.Pages
                 // Kullanýcý giriþ yapmamýþsa yönlendirme yap veya giriþ yapmasý için iþlem yap
                 return RedirectToPage("Login");
             }
-           
-            // Kullanýcýnýn kimliðini alýn
-            //var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            
-            // Yönlendirme veya diðer iþlemler
-            return RedirectToPage("Index");
+
+            return RedirectToPage("MovieDetail", new { id = movieId });
         }
 
     }
