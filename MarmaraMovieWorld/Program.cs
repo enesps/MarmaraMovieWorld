@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=> options.UseSqlServ
 builder.Services.AddScoped<TMDbService>();
 builder.Services.AddScoped<OperationsService>();
 builder.Services.AddHttpClient();
-builder.Services.Configure<ApiKeysOptions>(builder.Configuration.GetSection("ApiKeys")); // Yap�land�rmay� ekleyin
+builder.Services.Configure<ApiKeysOptions>(builder.Configuration.GetSection("ApiKeys"));
 builder.Services.AddScoped<MovieDetailModel>();
 builder.Services
     .AddAuth0WebAppAuthentication(options => {

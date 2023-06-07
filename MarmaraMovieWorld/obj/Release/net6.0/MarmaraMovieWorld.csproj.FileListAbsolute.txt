@@ -281,3 +281,4 @@ C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\bin\Release\net
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\MarmaraMovieWorld.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\obj\Release\net6.0\MarmaraMovieWorld.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\MarmaraMovieWorld\MarmaraMovieWorld\bin\Release\net6.0\libman.json

@@ -25,6 +25,10 @@ namespace acme.Pages
             Console.WriteLine(authenticateResult.Succeeded);
             var principal = authenticateResult.Principal;
 
+            if(principal == null)
+            {
+                return NotFound();
+            }
             foreach (var claim in principal.Claims)
             {
                 Console.WriteLine($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
@@ -41,29 +45,33 @@ namespace acme.Pages
 
                 if (!string.IsNullOrEmpty(email))
                 {
-                    // Burada e-posta adresini kullanarak kullanýcýnýn user tablosunda olup olmadýðýný kontrol edebilirsiniz
                     var existingUser = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
 
                     if (existingUser == null)
                     {
                         Console.WriteLine("yeni user");
-                        // Kullanýcý user tablosunda bulunamadý, yeni bir kullanýcý ekleyebilirsiniz
 
                         var newUser = new User
                         {
                             Email = email,
-                            Name = name
-                            // Diðer gerekli alanlarý da doldurun
+                            Name = name                    
                         };
 
                         _dbContext.Users.Add(newUser);
                         await _dbContext.SaveChangesAsync();
 
-                        Console.WriteLine("kullanýcý eklendi");
-
-                        // Yeni kullanýcý baþarýyla eklendi, gerekli iþlemleri yapabilirsiniz
+                        Console.WriteLine("kullanýcý eklendi");                        
                     }
+
                 }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            else
+            {
+                    return NotFound(); 
             }
 
             return RedirectToPage("Index");
