@@ -19,12 +19,12 @@
     </div>
     
 
-    <div class="container center">
-        <div class="row mt-3">
+    <div class=" center">
+        <div class="grid-movie">
             @foreach (var movie in Model.PopularMovies)
             {
                 string url = "https://image.tmdb.org/t/p/original" + movie.Poster_Path;
-                <div class="col-md-4 center">
+                <div class="center">
                     <a href="MovieDetail?id=@movie.Id" class="nav-link">
                         <div class="movie-card mb-5 relative bg-black border-dark " style="--bs-bg-opacity: .4;">
                             <img src="@url" alt="Poster" class="card-img-top absolute " width="100%" height="75%" />
