@@ -11,6 +11,7 @@ html, body {
     background: black;
     background-image: linear-gradient(to left bottom,rgba(10,12,15,0.8),black), url('https://wallpaperaccess.com/full/3658597.jpg');
     background-repeat: repeat-y;
+    min-width: 502px;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -37,6 +38,14 @@ html, body {
 
 .padding-auto {
 width:100%;
+}
+
+.grid-movie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+   
 }
 
 .home-btn {
@@ -89,6 +98,7 @@ nav {
     
 }
 
+
 .movie-card {
     position: relative;
     display: flex;
@@ -102,3 +112,36 @@ nav {
     box-shadow: 0rem 0rem 1rem 0px #05035fa8 !important;
     color:white;
 }
+
+@media only screen and (max-width: 1318px) {
+    .grid-movie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 893px) {
+    .grid-movie {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .layout {
+        padding-top: 120px;
+    }
+
+    .navigator {
+        display: grid;
+        flex-direction: column;
+      
+    }
+    .nav-item{
+        margin:5px;
+    }
+    nav {
+        max-width: 450px;
+    }
+}
+
+
+
